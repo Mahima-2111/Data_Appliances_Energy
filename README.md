@@ -65,3 +65,65 @@ Tdewpoint (from Chievres weather station), Â°C
 rv1, Random variable 1, nondimensional
 
 rv2, Random variable 2, nondimensional
+
+
+**Number of instances**: 19,735
+
+**Number of attributes**: 29
+
+No null values in the dataset.
+
+**Observations**⚡
+
+**Temperature **- All the columns follow normal distribution except T9
+
+**Humidity** - All columns follow normal distribution except RH_6 and RH_out , primarly because these sensors are outside the house
+
+**Visibilty** - This column is negatively skewed
+
+**Windspeed** - This column is postively skewed
+
+As maximum value in **lights** attribute is 0, it wont be playing much role in our model. Hence we are dropping the lights attribute from our dataset.
+
+Average energy consumption of appliances at different time of the day over a period of 4.5 months, we observe two peak hours. One at 11 am in the morning and other at 6 PM in the evening. While the peak at 11 am is shallow and low, peak at 6 PM is comparatively higher and sharper.
+
+We observe that over the sleeping hours (10 PM - 6 AM) the energy consumption of appliances is around 50 Wh. After about 6 AM, energy consumption starts to rise gradually up until 11 AM (probably due to morning chores). And then gradually decreases to around 100 Wh at about 3 PM. After which the energy consumption drastically shoots up up until 6 PM in the evening (probably due to requirement lights in rooms). However energy consumption of appliances reverts back to 50 Wh, as night approaches and people in the house go to bed at around 10 PM.
+
+**Insights** ⚡: We observe that the energy consumption of appliances during the 8 AM - 4 PM is higher in weekends compared to the weekdays. Also, average overall consumption in weekends is pretty high.
+
+**Insights**⚡:
+
+90% of Appliance consumption is less than 200 Wh .
+
+This column is postively skewed , most the values are around mean 100 Wh .
+
+There will be outliers in this column.
+
+There are small number of cases where consumption is very high.
+
+**Observations**⚡:
+
+Outside Average temperature over a period of 4.5 months is around 7.5 degrees and ranges from -6(min) to 28(max) degrees.
+
+Inside the building avarage temperature has been around 20 degrees for all the rooms and ranges from 14(min) to 30(max) degrees.
+
+Note: These points implies that warming appliances have been used to keep the insides of the building warm. There must be some sort of direct correlation b/w temperature and consumption of energy inside the house.
+
+**Observations** :
+
+Outside the building average temp > average humidity inside the house.
+
+Average humidity at the weather station > outside humidity near the building.
+
+Average humidity in the bathroom > other rooms due to obvious reasons.
+
+Kids and parent room show a comparatively higher average humidity.
+
+OBSERVATIONS ⚡:
+
+From the correlation graph we clearly observe that the features related to temperature and features related to humidity have positive correlation within themselves whereas have a a very low or negative correlation with each other.
+
+Humidity outside have a strong negative correlation with temperature levels.
+
+Apart from that we observe that a couple features such as humidity at station, temperature outside the building and temperature in the living room have a comparatively high absolute correlation (above 0.12) with Appliances energy consumption.
+
